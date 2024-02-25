@@ -1,0 +1,14 @@
+#!/bin/bash
+function loadanim() {
+	local spin='-\|/';
+	local command=$1
+	local pid=$(ps aux | grep "$command" | grep -v grep | awk '{print $2}');
+
+	while [ -d "/proc/$pid" ]; do
+	   tmp=${spin#?}
+	   printf " [%c] " "$spin"
+	   spin=$tmp${spin%"$tmp"}
+	   sleep 0.1
+	   printf "\b\b\b\b\b"
+	done
+}
