@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <stdint.h>
 int main (int argc, char* argv[]) 
 {
 int fibLimit = atoi(argv[1]);
-int fibT = 0;
-int fib2 = 1;
-int fib1 = 0;
+uint64_t fibT = 0;
+uint64_t  fib2 = 1;
+uint64_t fib1 = 0;
 
 	while (1 < fibLimit ) 
 	{
@@ -16,7 +16,9 @@ int fib1 = 0;
         fib1 = fibT;
 	fibLimit --;	
 	}
+	
+	
 
-printf("%d\n", fib2);
+printf("%llu\n", fib2);
 return 0;
 }
