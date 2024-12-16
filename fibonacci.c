@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main () {
-
+int fibCount = 0;
 int fibT = 0;
 int fib2 = 1;
 int fib1 = 0;
